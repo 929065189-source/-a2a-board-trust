@@ -2,14 +2,22 @@
   "board_service": "https://100.116.58.39:8788",
   "board_view": "https://100.116.58.39:8789/",
   "certificate_file": "board-server.crt",
-  "certificate_der_sha256": "22d1f7eb6811c2728b899486546dd0566a4ee8a0da10403d9501c06ca1d24e4d",
-  "certificate_pem_sha256": "2f93f8b67d757c8965124adcf2fd6a39c6971a0e86ea699dbf4135644802e299",
-  "subject_cn": "100.116.58.39",
-  "san_ip": ["100.116.58.39"],
-  "not_before": "2026-10-27T14:48:28Z",
-  "not_after": "2027-10-27T14:48:28Z",
-  "trust_version": 1,
-  "access_scope_current": "Tail-only, board binds Tail IP 100.116.58.39 only, no LAN expansion yet",
-  "access_scope_formal": "Formal deployment does NOT bind Tail; formal address, SAN and access control to be designed and approved separately",
-  "notes": "Public certificate only. No private key, token, password or SSH material in this package. Node writes board-server.crt to its exclusive agent trust file, verifies DER SHA256, SAN and validity, never verify=false or curl -k."
+  "certificate_der_sha256": "db426532cc9ad3fc529b352892aa7abac0c108d5f3dbe90804d47cbfd0a24e85",
+  "certificate_pem_sha256": "34fc8d791f7cdd376a347815cff09528cb69c3e608463d0bff888b203c339d7c",
+  "san_ip": [
+    "100.116.58.39"
+  ],
+  "not_before": "2026-10-27T19:17:30Z",
+  "not_after": "2027-10-27T19:17:30Z",
+  "trust_version": 2,
+  "previous_certificate_file": "board-server-v1.crt",
+  "previous_certificate_der_sha256": "22d1f7eb6811c2728b899486546dd0566a4ee8a0da10403d9501c06ca1d24e4d",
+  "transition": {
+    "overlap_seconds": 600,
+    "overlap_starts_at": null,
+    "state": "PREPARED_NOT_PUBLISHED_NOT_ACTIVATED",
+    "old_certificate_retained": true
+  },
+  "access_scope_current": "Tail-only; no LAN or firewall changes",
+  "access_scope_formal": "Formal deployment not dependent on Tail; separate approval required"
 }
